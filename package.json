@@ -1,0 +1,29 @@
+{
+  "name": "301-project",
+  "version": "1.0.0",
+  "description": "**Team member ** Matthaus, Peter, Romell, Yihang",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyh0308/301-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zyh0308/301-project/issues"
+  },
+  "homepage": "https://github.com/zyh0308/301-project#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "pg": "^7.15.2",
+    "superagent": "^5.1.3"
+  }
+}

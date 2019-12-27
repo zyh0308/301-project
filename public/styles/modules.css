@@ -1,0 +1,39 @@
+#landing {
+  align-items: center;
+  color: white;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.landing-text {
+  color: rgb(255, 255, 255);
+  font-family: 'Rock Salt', cursive;
+}
+
+#welcome {
+  align-items: center;
+  background-color: rgba(230, 228, 228, 0.07);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  padding: 3em;
+  width: 50vw;
+  z-index: 1;
+}
+
+#welcome h1 {
+  font-size: 3em;
+}
+
+#video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
