@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Form Page</title>
-</head>
-
-<body>
-  <header>
-    <h1>Form</h1>
-  </header>
-  <main>
-    <section id="form">
+  <section id="form">
       <form method="POST" action="/search">
         <label class="items"><span>Participate number</span>
-          <input type="number" name="Participate">
+          <input type="number" min="0" step="0.01" name="Participants" >
         </label>
         <label class="items"><span>Accessbility</span>
-          <input type="number" name="Participate" >
+          <input type="number" min="0" step="0.01" name="Accessbility" >
         </label>
       
         <label class="items"> <span>Price</span>
-          <input type="number" name="price">
+          <input type="number" min="0" step="0.01" name="price" >
         </label>
         <label class="items">
           <input type="submit" value="Show me some activities">
@@ -31,6 +16,3 @@
 
       </form>
     </section>
-</body>
-
-</html>
