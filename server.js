@@ -8,18 +8,21 @@ const methodoverride = require('method-override');
  const pg = require('pg');
  const superagent = require('superagent');
 
-const PORT = process.env.PORT || 3010;
+const PORT = process.env.PORT || 3009;
 const app = express();
+
+const expressLayouts=require('express-ejs-layouts');
 
 const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', (e) => console.error(e));
 client.connect();
 
-//Delete User Save 
 
 app.use(methodoverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('./public'));
+app.use(expressLayouts);
+
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
