@@ -5,10 +5,10 @@ require('dotenv').config();
 const express = require('express');
 const ejs = require('ejs');
 const methodoverride = require('method-override');
- const pg = require('pg');
- const superagent = require('superagent');
+const pg = require('pg');
+const superagent = require('superagent');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3240;
 const app = express();
 
 const expressLayouts=require('express-ejs-layouts');
@@ -46,7 +46,7 @@ app.get('/one', (req, res) => {
     })
   }
 
-//this needs to be below the csl
+//this needs to be below the call back function 
 app.delete('/delete', deleteBook);
 
 
@@ -58,10 +58,8 @@ app.delete('/delete', deleteBook);
   
     let sqlData = [req.body.activity, req.body.accessibility, req.body.type, req.body.participants, req.body.price, req.body.key];
   
-    // let SQLrow = (SQL, [req.body.author, req.body.title, req.body.isbn, req.body.image_url, req.body.summary, req.body.category]);
-  
     client.query(SQL, sqlData).then(() => {
-      res.redirect('/');
+      res.redirect('/saves');
     });
   
   });
