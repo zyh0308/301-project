@@ -4,11 +4,11 @@ require('dotenv').config();
 
 const express = require('express');
 const ejs = require('ejs');
-
+const methodoverride = require('method-override');
  const pg = require('pg');
  const superagent = require('superagent');
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3010;
 const app = express();
 
 const client = new pg.Client(process.env.DATABASE_URL);
@@ -16,8 +16,8 @@ client.on('error', (e) => console.error(e));
 client.connect();
 
 //Delete User Save 
-app.delete('/delete', deleteUserSave);
 
+app.use(methodoverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('./public'));
 app.set('view engine', 'ejs');
@@ -35,17 +35,17 @@ app.get('/one', (req, res) => {
 });
 
 
-
-
-  //THIS WILL DELETE A USER CHOICE 
-  function deleteUserSave(req, res){
-    console.log("HELLO", req.body.id);
-      client.query('DELETE FROM bored WHERE id=$1', [req.body.id]).then(result=>{
-     
-      res.redirect('/');
-      });
+  //THIS IS THE CALL BACK FUNCTION TO DELETE (needs to be above where it is called)
+  const deleteBook = function (req , res ) {
+    console.log(req.body.id);
+    client.query('DELETE FROM bored WHERE id=$1',[req.body.id]).then( sql => {
+      res.redirect('/saves');
+    })
   }
-  
+
+//this needs to be below the csl
+app.delete('/delete', deleteBook);
+
 
 //THIS WILL SAVE USERS FAVORITE ACTIVITY TO DATABASE
   app.post('/saves', (req, res) => {
@@ -67,7 +67,7 @@ app.get('/one', (req, res) => {
 app.get('/saves', (req, res) => {
   const instruction = 'SELECT * FROM bored;';
   client.query(instruction).then(function(sqlSaveData){
-    console.log('is it working',sqlSaveData.rows);
+    //console.log('is it working',sqlSaveData.rows);
     const boredDataArray = sqlSaveData.rows;
     if(boredDataArray.length > 0){
       res.render('pages/saves', { boredDataArray });
@@ -76,7 +76,6 @@ app.get('/saves', (req, res) => {
     }
   });
 });
-
 
 
 app.listen(PORT, () => console.log(`app running on ${PORT}`));
