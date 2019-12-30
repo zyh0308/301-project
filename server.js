@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
 
 app.get('/main', (req, res) => {
   res.render('pages/main');
-})
+});
+
+app.get('/one', (req, res) => {
+  res.render('pages/form');
+});
 
 app.listen(PORT, () => console.log(`app running on ${PORT}`));
