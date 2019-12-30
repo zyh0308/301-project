@@ -23,7 +23,7 @@
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
-    "pg": "^7.15.2",
+    "pg": "^7.17.0",
     "superagent": "^5.1.3"
   }
 }
