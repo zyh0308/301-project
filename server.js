@@ -28,10 +28,11 @@ app.get('/', (req, res) => {
 
 app.get('/main', (req, res) => {
   res.render('pages/main');
-})
-// app.get('/saves', (req, res) => {
-//   res.render('pages/saves');
-// })
+});
+
+app.get('/one', (req, res) => {
+  res.render('pages/form');
+});
 
 
 
