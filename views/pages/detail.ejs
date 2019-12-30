@@ -11,14 +11,19 @@
         <h1>Here are some activities</h1>
     </header>
     <main>
+        <section class="activities">
+          
 
-    <section>
-        <!-- <img src='<%=image_url %>'/> -->
-        <!-- <h3><%=title %></h3> -->
-        <!-- <p><%= description %></p> -->
-        <!-- <p><%= price %></p> -->
-        
-    </section>
+              <% activity_Listings.forEach( each_Activity => { %>
+
+                <div>
+                     <h3><%= each_Activity.activity %></h3>
+                     <p>Number of participants:<%= each_Activity.participants %></p>
+                     <p>Cost: <%= each_Activity.price %></p>
+                     <p>Accessibility level: <%= each_Activity.accessibility %></p>
+                </div>
+              <% }) %>
+          </section>
     </main>
 </body>
 </html>
