@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SAVED FAVORITES</title>
+
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+
+</head>
+
+<body>
+  <header>
+    <nav>
+     
+  
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="center">Activities Saved: <span id="count"><%=  boredDataArray.length %></span></h1>
+    <div class="content">
+      <% boredDataArray.forEach(bored => { %>
+     
+      <h3>Acitvity: <%= bored.activity %> </h3>
+      <h3>Accessibility Ranking: <%= bored.accessibility %> </h3>
+      <h3>Activity Type: <%= bored.type%> </h3>
+      <h3>Participants: <%= bored.participants %> </h3>
+      <h3>Price: <%= bored.price %> </h3>
+     
+      
+      <form action="/delete?_method=DELETE" method="POST">
+        <input type="hidden" name= "id" value="<%=bored.id%>">
+        <input type="submit" value="delete activity">
+      </form>
+
+     
+        
+      
+
+     
+
+      </div>
+      <% }) %>
+
+
+    </div>
+  </main>
+</body>
+
+</html>
