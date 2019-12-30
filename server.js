@@ -11,12 +11,19 @@ const ejs = require('ejs');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+const expressLayouts=require('express-ejs-layouts');
+
 const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', (e) => console.error(e));
 client.connect();
 
+
+
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('./public'));
+app.use(expressLayouts);
+
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {

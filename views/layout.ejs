@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bored App</title>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  
+  <header>
+    <h1>Welcome to our board app</h1>
+    <nav>
+      <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content">
+            <a href="/views/pages/index.ejs">Home</a>
+            <a href="/views/pages/form.ejs"><Form></Form></a>
+            <a href="views/pages/detail.ejs">Result</a>
+          </div>
+        </div>
+    </nav>
+  </header>
+  <%- body %>
+</body>
+
+</html>
+
+
+
+
+
+
