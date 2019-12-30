@@ -8,3 +8,38 @@ nav {
   justify-content: space-between;
   margin: 1.5em;
 }
+
+.container{
+  margin: 20px auto;
+  width:400px;
+  height:400px;
+  background-color:#fff;
+  display:grid;
+  grid-template-columns: 200px 200px;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+  .box{
+    background-color:darkcyan;
+    padding:20px;
+    border-radius:10px;
+    color:#fff;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+
+  }
+  
+  @media(min-width: 768px){
+    header,  section, footer {
+        max-width: 960px;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 500px) {
+    header, section, footer {
+        max-width: 500px;
+    }
+  }
