@@ -32,14 +32,14 @@ nav {
   }
   
   @media(min-width: 768px){
-    header,  section, footer {
+    header,  main, footer {
         max-width: 960px;
     }
     
   }
   
   @media only screen and (max-width: 500px) {
-    header, section, footer {
+    header, main, footer {
         max-width: 500px;
     }
   }
