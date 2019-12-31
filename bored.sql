@@ -12,3 +12,5 @@ key VARCHAR(255)
 INSERT INTO bored (activity, accessibility, type, participants, price, key)
 VALUES('Swimming', '5', 'athletic', '5', '5', '23454334');
 
+
+
