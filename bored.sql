@@ -11,7 +11,7 @@ username VARCHAR(255)
 
 
 INSERT INTO bored (activity, accessibility, type, participants, price, key, username)
-VALUES(             'Swimming', '5', 'athletic', '5', '5', '23454334', 'tom');
+VALUES('Swimming', '5', 'athletic', '5', '5', '23454334', 'tom');
 
 
 

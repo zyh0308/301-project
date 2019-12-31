@@ -56,6 +56,15 @@ app.post('/four', new_Activity_Search);
 app.get('/about', (req, res) => {
   res.render('pages/about');
 });
+let username;
+
+app.post('/user-name', (req, res)=>{
+username = req.body.username;
+console.log(username);
+res.redirect('/main');
+});
+
+
 
 
   //THIS IS THE CALL BACK FUNCTION TO DELETE (needs to be above where it is called)
@@ -84,7 +93,7 @@ app.delete('/delete', deleteBook);
   
   });
 
-let username = "tom";
+
 
 app.get('/saves', (req, res) => {
   const instruction = 'SELECT * FROM bored;';
