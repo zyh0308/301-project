@@ -5,7 +5,7 @@
     <h1 class="center">Activities Saved: <span id="count"><%=  boredDataArray.length %></span></h1>
     <div class="content">
       <% boredDataArray.forEach(bored => { %>
-     
+        <% if (bored.username === username){%>
       <h3>Acitvity: <%= bored.activity %> </h3>
       <h3>Accessibility Ranking: <%= bored.accessibility %> </h3>
       <h3>Activity Type: <%= bored.type%> </h3>
@@ -20,6 +20,7 @@
  
 
       </div>
+      <% } %>
       <% }) %>
 
 
