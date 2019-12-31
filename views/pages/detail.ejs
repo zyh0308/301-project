@@ -13,10 +13,10 @@
     </header>
     <main>
         <section class="activities">
-          
+                
 
               <% activity_Listings.forEach( each_Activity => { %>
-
+              
                 <div>
                      <h3><%= each_Activity.activity %></h3>
                      <p>Number of participants:<%= each_Activity.participants %></p>
@@ -34,10 +34,11 @@
         <input type ="hidden" name="key" value="<%= each_Activity.key %>">
         <input type="submit" value="Save Activity">
       </form>
-
+  
               <% }) %>
+             
           </section>
-
+        
           
     </main>
 </body>

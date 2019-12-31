@@ -8,7 +8,7 @@ const methodoverride = require('method-override');
 const pg = require('pg');
 const superagent = require('superagent');
 
-const PORT = process.env.PORT || 3050; 
+const PORT = process.env.PORT || 3000; 
 const app = express();
 
 const expressLayouts=require('express-ejs-layouts');
@@ -73,17 +73,18 @@ app.delete('/delete', deleteBook);
 //THIS WILL SAVE USERS FAVORITE ACTIVITY TO DATABASE
   app.post('/user-saves', (req, res) => {
     let SQL = `INSERT INTO bored
-    (activity, accessibility, type, participants, price, key)
-    VALUES($1,$2,$3,$4,$5,$6);`;
+    (activity, accessibility, type, participants, price, key, username)
+    VALUES($1,$2,$3,$4,$5,$6, $7);`;
   
-    let sqlData = [req.body.activity, req.body.accessibility, req.body.type, req.body.participants, req.body.price, req.body.key];
+    let sqlData = [req.body.activity, req.body.accessibility, req.body.type, req.body.participants, req.body.price, req.body.key, username];
   console.log(sqlData);
     client.query(SQL, sqlData).then(() => {
       res.redirect('/saves');
     });
   
   });
-  
+
+let username = "tom";
 
 app.get('/saves', (req, res) => {
   const instruction = 'SELECT * FROM bored;';
@@ -91,7 +92,7 @@ app.get('/saves', (req, res) => {
     //console.log('is it working',sqlSaveData.rows);
     const boredDataArray = sqlSaveData.rows;
     if(boredDataArray.length > 0){
-      res.render('pages/saves', { boredDataArray });
+      res.render('pages/saves', { boredDataArray, username });
     } else {
       res.redirect('/main');
     }
