@@ -1,3 +1,13 @@
+#about {
+  align-items: center;
+  color: palevioletred;
+  display: flex;
+  font-family: 'Rock Salt', cursive;
+  justify-content: center;
+  height: 75vh;
+  padding: 3em;
+}
+
 #landing {
   align-items: center;
   color: white;
@@ -14,10 +24,29 @@
   font-family: 'Rock Salt', cursive;
 }
 
+.menu-options {
+  display: none;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 99;
+}
+
+.menu-options a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu-options a:hover {background-color: #ddd;}
+.menu:hover .menu-options {display: block;}
+.menu:hover i {display: none;}
+
 #welcome {
   align-items: center;
   background-color: rgba(230, 228, 228, 0.07);
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
