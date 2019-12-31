@@ -22,8 +22,22 @@
                      <p>Cost: <%= each_Activity.price %></p>
                      <p>Accessibility level: <%= each_Activity.accessibility %></p>
                 </div>
+
+                  
+      <form action="/user-saves" method="POST">
+        <input type ="hidden" name="activity" value="<%= each_Activity.activity %>">
+        <input type ="hidden" name="accessibility" value="<%= each_Activity.accessibility %>">
+        <input type ="hidden" name="type" value="<%= each_Activity.type %>">
+        <input type ="hidden" name="price" value="<%= each_Activity.price %>">
+        <input type ="hidden" name="participants" value="<%= each_Activity.participants %>">
+        <input type ="hidden" name="key" value="<%= each_Activity.key %>">
+        <input type="submit" value="Save Activity">
+      </form>
+
               <% }) %>
           </section>
+
+          
     </main>
 </body>
 </html>

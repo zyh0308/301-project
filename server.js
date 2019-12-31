@@ -8,7 +8,7 @@ const methodoverride = require('method-override');
 const pg = require('pg');
 const superagent = require('superagent');
 
-const PORT = process.env.PORT || 3240;
+const PORT = process.env.PORT || 3050; 
 const app = express();
 
 const expressLayouts=require('express-ejs-layouts');
@@ -56,7 +56,7 @@ app.post('/four', new_Activity_Search);
 
   //THIS IS THE CALL BACK FUNCTION TO DELETE (needs to be above where it is called)
   const deleteBook = function (req , res ) {
-    console.log(req.body.id);
+    //console.log(req.body.id);
     client.query('DELETE FROM bored WHERE id=$1',[req.body.id]).then( sql => {
       res.redirect('/saves');
     })
@@ -67,13 +67,13 @@ app.delete('/delete', deleteBook);
 
 
 //THIS WILL SAVE USERS FAVORITE ACTIVITY TO DATABASE
-  app.post('/saves', (req, res) => {
+  app.post('/user-saves', (req, res) => {
     let SQL = `INSERT INTO bored
     (activity, accessibility, type, participants, price, key)
     VALUES($1,$2,$3,$4,$5,$6);`;
   
     let sqlData = [req.body.activity, req.body.accessibility, req.body.type, req.body.participants, req.body.price, req.body.key];
-  
+  console.log(sqlData);
     client.query(SQL, sqlData).then(() => {
       res.redirect('/saves');
     });
@@ -120,7 +120,7 @@ function new_Activity_Search(request, response){
     return new Promise( (resolve, reject) => {
       superagent.get(url).then(result => {
       let new_Activity = new Activity(result.body);
-      console.log('HEY NEW ACTIVITY', new_Activity);
+      //console.log('HEY NEW ACTIVITY', new_Activity);
       resolve(new_Activity)
       // console.log('EXPRESS ARRAY',activities_Array);
     }).catch( err => {
@@ -137,7 +137,7 @@ function new_Activity_Search(request, response){
 
   }
   
-  console.log('PROMISESARRAY', promisesArray);
+  //console.log('PROMISESARRAY', promisesArray);
   Promise.all(promisesArray).then( (superAgentResponses) => {
     response.render('./pages/detail', {activity_Listings:superAgentResponses});
   });
