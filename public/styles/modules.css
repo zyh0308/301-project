@@ -1,3 +1,29 @@
+#about {
+  align-items: center;
+  color: palevioletred;
+  display: flex;
+  font-family: 'Rock Salt', cursive;
+  justify-content: center;
+  height: 75vh;
+  padding: 3em;
+}
+
+#landing {
+  align-items: center;
+  color: white;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.landing-text {
+  color: rgb(255, 255, 255);
+  font-family: 'Rock Salt', cursive;
+}
+
 .menu-options {
   display: none;
   background-color: #f1f1f1;
@@ -17,26 +43,10 @@
 .menu:hover .menu-options {display: block;}
 .menu:hover i {display: none;}
 
-#landing {
-  align-items: center;
-  color: white;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  width: 100vw;
-}
-
-.landing-text {
-  color: rgb(255, 255, 255);
-  font-family: 'Rock Salt', cursive;
-}
-
 #welcome {
   align-items: center;
   background-color: rgba(230, 228, 228, 0.07);
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;

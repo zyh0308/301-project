@@ -53,6 +53,10 @@ app.get('/four', (req, res) => {
 });
 app.post('/four', new_Activity_Search);
 
+app.get('/about', (req, res) => {
+  res.render('pages/about');
+});
+
 
   //THIS IS THE CALL BACK FUNCTION TO DELETE (needs to be above where it is called)
   const deleteBook = function (req , res ) {
