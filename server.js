@@ -8,7 +8,7 @@ const methodoverride = require('method-override');
 const pg = require('pg');
 const superagent = require('superagent');
 
-const PORT = process.env.PORT || 3000; 
+const PORT = process.env.PORT || 3040; 
 const app = express();
 
 const expressLayouts=require('express-ejs-layouts');
@@ -30,33 +30,35 @@ app.get('/', (req, res) => {
 });
 
 app.get('/main', (req, res) => {
-  res.render('pages/main');
+  res.render('pages/main', {username});
 });
 
 app.get('/one', (req, res) => {
-  res.render('pages/form');
+  res.render('pages/form', {username});
 });
 app.post('/one', new_Activity_Search);
 
 app.get('/two', (req, res) => {
-  res.render('pages/form');
+  res.render('pages/form', {username});
 });
 app.post('/two', new_Activity_Search);
 
 app.get('/three', (req, res) => {
-  res.render('pages/form');
+  res.render('pages/form', {username});
 });
 app.post('/three', new_Activity_Search);
 
 app.get('/four', (req, res) => {
-  res.render('pages/form');
+  res.render('pages/form', {username});
 });
 app.post('/four', new_Activity_Search);
 
 app.get('/about', (req, res) => {
-  res.render('pages/about');
+  res.render('pages/about',{username});
 });
 let username;
+
+
 
 app.post('/user-name', (req, res)=>{
 username = req.body.username;
@@ -153,7 +155,7 @@ function new_Activity_Search(request, response){
   
   //console.log('PROMISESARRAY', promisesArray);
   Promise.all(promisesArray).then( (superAgentResponses) => {
-    response.render('./pages/detail', {activity_Listings:superAgentResponses});
+    response.render('./pages/detail', {activity_Listings:superAgentResponses, username});
   });
 
 }
