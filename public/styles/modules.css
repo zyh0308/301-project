@@ -66,3 +66,105 @@
   left: 0;
   width: 100vw;
 }
+
+.container{
+  margin: 20px auto;
+  width:100vw;
+  height:100vw;
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin-top: 10em;
+  
+}
+  .box1{
+    padding:10px;
+    height: 100%;
+    width: 100%;
+    border-radius:20px;
+    color:#FFDC00;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    background-image: url("../assets/family.jpg");
+    background-size: cover;
+
+
+  }
+
+
+  .box2{
+    padding:20px;
+    border-radius:20px;
+    height: 100%;
+    width: 100%;
+    color:#FFDC00;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    background-image: url("../assets/work.jpg");
+
+    background-size: cover;
+
+  
+
+
+  }
+  .box3{
+    padding:20px;
+    border-radius:20px;
+    height: 100%;
+    width: 100%;
+    color:#FFDC00;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    background-image: url("../assets/individual.jpg");
+    background-size: cover;
+
+
+  }
+  .box4{
+    padding:20px;
+    border-radius:20px;
+    height: 100%;
+    width: 100%;
+    color:#FFDC00;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    background-image: url("../assets/access.jpg");
+    background-size: cover;
+
+
+  }
+
+  .image {
+    height: auto;
+    background-image: url("../assets/background.jpg");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
+    
+  }
+  
+
+  .activities{
+
+    margin: 5px auto;
+    width:100px;
+    height:100px;
+    display:grid;
+    grid-template-columns: 50px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    color: honeydew;
+
+
+  }
+
+ 

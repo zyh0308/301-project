@@ -1,6 +1,8 @@
+
 body {
   margin: 0px;
   padding: 0px;
+ 
 }
 
 nav {
@@ -8,3 +10,17 @@ nav {
   justify-content: space-between;
   margin: 1.5em;
 }
+
+
+  @media(min-width: 768px){
+    header, main  {
+        max-width: 960px;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 500px) {
+    header, main{
+        max-width: 500px;
+    }
+  }
