@@ -69,7 +69,6 @@ res.redirect('/main');
 
 
 
-
   //THIS IS THE CALL BACK FUNCTION TO DELETE (needs to be above where it is called)
   const deleteBook = function (req , res ) {
     //console.log(req.body.id);
