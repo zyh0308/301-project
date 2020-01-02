@@ -14,7 +14,7 @@
             <p class="box6">Number of participants:<%= each_Activity.participants %></p>
             <p class="box7">Cost: <%= each_Activity.price %></p>
             <p class="box8">Accessibility level: <%= each_Activity.accessibility %></p>
-            <input type="submit" class="save" value="Save Activity">
+            <!-- <input type="submit" class="save" value="Save Activity"> -->
 
         </div>
 
@@ -26,7 +26,7 @@
             <input type="hidden" name="price" value="<%= each_Activity.price %>">
             <input type="hidden" name="participants" value="<%= each_Activity.participants %>">
             <input type="hidden" name="key" value="<%= each_Activity.key %>">
-            <!-- <input type="submit" class="save" value="Save Activity"> -->
+            <input type="submit" class="save" value="Save Activity">
         </form>
 
         <% }) %>
