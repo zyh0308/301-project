@@ -96,7 +96,6 @@ app.delete('/delete', deleteBook);
 app.get('/saves', (req, res) => {
   const instruction = 'SELECT * FROM bored;';
   client.query(instruction).then(function(sqlSaveData){
-    //console.log('is it working',sqlSaveData.rows);
     const boredDataArray = sqlSaveData.rows;
     if(boredDataArray.length > 0){
       res.render('pages/saves', { boredDataArray, username });
@@ -121,8 +120,6 @@ function Activity(object){
 
 
 function new_Activity_Search(request, response){
-  // let request_parameters = request.body;
-  // var activities_Array = [];
   let promisesArray = [];
 
   let url = `https://www.boredapi.com/api/activity?price=${request.query.price}&participants=${request.query.participants}&minaccessibility=${request.query.minaccessibility}&maxaccessibility=${request.query.maxaccessibility}`;
@@ -132,9 +129,7 @@ function new_Activity_Search(request, response){
     return new Promise( (resolve, reject) => {
       superagent.get(url).then(result => {
       let new_Activity = new Activity(result.body);
-      //console.log('HEY NEW ACTIVITY', new_Activity);
       resolve(new_Activity)
-      // console.log('EXPRESS ARRAY',activities_Array);
     }).catch( err => {
       console.error(err);
     });
@@ -149,7 +144,6 @@ function new_Activity_Search(request, response){
 
   }
   
-  //console.log('PROMISESARRAY', promisesArray);
   Promise.all(promisesArray).then( (superAgentResponses) => {
     response.render('./pages/detail', {activity_Listings:superAgentResponses, username});
   });
