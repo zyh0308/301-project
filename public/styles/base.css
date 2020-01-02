@@ -12,15 +12,14 @@ nav {
 }
 
 
-  @media(min-width: 768px){
-    header, main  {
-        max-width: 960px;
-    }
-    
+@media(min-width: 768px){
+  main  {
+      max-width: 960px;
   }
+}
   
-  @media only screen and (max-width: 500px) {
-    header, main{
-        max-width: 500px;
-    }
+@media only screen and (max-width: 500px) {
+  main{
+      max-width: 500px;
   }
+}
