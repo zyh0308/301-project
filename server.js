@@ -33,25 +33,21 @@ app.get('/main', (req, res) => {
   res.render('pages/main', {username});
 });
 
-app.get('/one', (req, res) => {
-  res.render('pages/form', {username});
+app.get('/family', (req, res) => {
+  new_Activity_Search(req, res);
 });
-app.post('/one', new_Activity_Search);
 
-app.get('/two', (req, res) => {
-  res.render('pages/form', {username});
+app.get('/work', (req, res) => {
+  new_Activity_Search(req, res);
 });
-app.post('/two', new_Activity_Search);
 
-app.get('/three', (req, res) => {
-  res.render('pages/form', {username});
+app.get('/individual', (req, res) => {
+  new_Activity_Search(req, res);
 });
-app.post('/three', new_Activity_Search);
 
-app.get('/four', (req, res) => {
-  res.render('pages/form', {username});
+app.get('/accessibility', (req, res) => {
+  new_Activity_Search(req, res);
 });
-app.post('/four', new_Activity_Search);
 
 app.get('/about', (req, res) => {
   res.render('pages/about',{username});
@@ -125,11 +121,11 @@ function Activity(object){
 
 
 function new_Activity_Search(request, response){
-  let request_parameters = request.body;
-  var activities_Array = [];
+  // let request_parameters = request.body;
+  // var activities_Array = [];
   let promisesArray = [];
 
-  let url = `https://www.boredapi.com/api/activity?price=${request_parameters.price}&participants=${request_parameters.participants}`;
+  let url = `https://www.boredapi.com/api/activity?price=${request.query.price}&participants=${request.query.participants}&minaccessibility=${request.query.minaccessibility}&maxaccessibility=${request.query.maxaccessibility}`;
 
   function promiseConstructor(url){
 
@@ -146,7 +142,7 @@ function new_Activity_Search(request, response){
 
   }
 
-  for(let i = 0; i < 5; i++){
+  for(let i = 0; i < 3; i++){
 
     let newPromise =  promiseConstructor(url)
     promisesArray.push(newPromise)
