@@ -146,25 +146,37 @@
     background-image: url("../assets/background.jpg");
     background-position: center;
     background-repeat: repeat;
-    background-size: cover;
+    background-size: 100%;
     position: relative;
     
   }
-  
+  main{
+    margin: 0 auto;
+  }
+  section{
+    margin:0 auto;
+  }
 
   .activities{
-
-    margin: 5px auto;
-    width:100px;
-    height:100px;
-    display:grid;
-    grid-template-columns: 50px 200px;
-    grid-row: auto auto;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    color: honeydew;
-
+  border:rgb(147, 172, 157) solid 1px;
+  background-color: rgba(230, 228, 228, 0.07);
+  border-radius: 20px;
+  margin:0 auto 3em;
+  height: 300px;
+  width:800px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: honeydew;
 
   }
 
- 
+  .save{
+    margin: 5px auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+  }

@@ -11,6 +11,16 @@ nav {
   margin: 1.5em;
 }
 
+h1{
+ color:rgb(223, 217, 192);
+ font-family: 'Lobster', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+ 
+}
+
 
 @media(min-width: 768px){
   main  {
