@@ -10,9 +10,9 @@
 
         <div class="activities" >
             <h3 ><%= each_Activity.activity %></h3>
-            <p >Number of participants:<%= each_Activity.participants %></p>
-            <p >Cost: <%= each_Activity.price %></p>
-            <p >Accessibility level: <%= each_Activity.accessibility %></p>
+            <p >Number of participants: <%= each_Activity.participants %></p>
+            <p >Cost: <%= each_Activity.price * 10 %></p>
+            <p >Accessibility level: <%= each_Activity.accessibility * 10%></p>
 
             
                     <form action="/user-saves" method="POST" >

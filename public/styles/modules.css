@@ -107,6 +107,7 @@
     align-items:center;
     justify-content:center;
     font-size:40px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     background-image: url("../assets/family.jpg");
     background-size: cover;
 
@@ -123,6 +124,7 @@
     align-items:center;
     justify-content:center;
     font-size:40px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     background-image: url("../assets/work.jpg");
 
     background-size: cover;
@@ -140,6 +142,7 @@
     align-items:center;
     justify-content:center;
     font-size:40px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     background-image: url("../assets/individual.jpg");
     background-size: cover;
 
@@ -154,6 +157,7 @@
     align-items:center;
     justify-content:center;
     font-size:40px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     background-image: url("../assets/access.jpg");
     background-size: cover;
 
