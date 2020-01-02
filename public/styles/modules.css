@@ -8,6 +8,17 @@
   padding: 3em;
 }
 
+#btn input {
+  border: 0px;
+  border-radius: 10px;
+  background-color: rgb(230, 227, 227);
+  color:palevioletred;
+  font-family: 'Rock Salt', cursive;
+  margin: 0.7em;
+  height: 3em;
+  width: 20em;
+}
+
 #landing {
   align-items: center;
   color: white;
@@ -42,6 +53,14 @@
 .menu-options a:hover {background-color: #ddd;}
 .menu:hover .menu-options {display: block;}
 .menu:hover i {display: none;}
+
+#name input {
+  font-family: 'Rock Salt', cursive;
+  height: 3em;
+  width: 20em;
+  background-color: rgb(230, 227, 227);
+  margin: 0.7em;
+}
 
 #welcome {
   align-items: center;
