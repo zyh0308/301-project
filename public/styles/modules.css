@@ -3,6 +3,7 @@
   color: palevioletred;
   display: flex;
   font-family: 'Rock Salt', cursive;
+  font-size: 1.5em;
   justify-content: center;
   height: 75vh;
   padding: 3em;
