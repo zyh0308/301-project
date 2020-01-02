@@ -106,7 +106,6 @@ app.get('/saves', (req, res) => {
 
 
 function Activity(object){
-  //console.log(object);
   this.activity = object.activity;
   this.accessibility = object.accessibility;
   this.type = object.type;
