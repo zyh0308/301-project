@@ -65,19 +65,15 @@ res.redirect('/main');
 
 
 
-  //THIS IS THE CALL BACK FUNCTION TO DELETE (needs to be above where it is called)
   const deleteBook = function (req , res ) {
-    //console.log(req.body.id);
     client.query('DELETE FROM bored WHERE id=$1',[req.body.id]).then( sql => {
       res.redirect('/saves');
     })
   }
 
-//this needs to be below the call back function 
 app.delete('/delete', deleteBook);
 
 
-//THIS WILL SAVE USERS FAVORITE ACTIVITY TO DATABASE
   app.post('/user-saves', (req, res) => {
     let SQL = `INSERT INTO bored
     (activity, accessibility, type, participants, price, key, username)
@@ -106,7 +102,6 @@ app.get('/saves', (req, res) => {
 
 
 function Activity(object){
-  //console.log(object);
   this.activity = object.activity;
   this.accessibility = object.accessibility;
   this.type = object.type;
