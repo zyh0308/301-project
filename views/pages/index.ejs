@@ -2,20 +2,17 @@
   <div id="welcome">
     <h1 class="landing-text">Bored App</h1>
     <p class="landing-text">Say goodbye to boredom forever! Type in your name and click the enter button</p>
-      
-  <section id="form">
+
+    <section id="form">
       <form method="POST" action="/user-name">
-        <label class="items">
-          <input type="text" name="username" required minlength="3">
+        <label id="name">
+          <input type="text" name="username" required minlength="3" placeholder="Your name">
         </label>
-        <label class="items">
-            <input type="submit" value="Enter">
-          
-          </label>
-       
+        <label id="btn">
+          <input type="submit" value="Enter">
+        </label>
       </form>
     </section>
-    
   </div>
 
 
