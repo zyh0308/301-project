@@ -172,7 +172,7 @@
   main{
     margin: 0 auto;
   }
-  section{
+  .detail{
     margin:0 auto;
   }
 
@@ -191,6 +191,7 @@
 
   }
 
+
   .save{
     margin: 5px auto;
     display:flex;
@@ -198,4 +199,9 @@
     justify-content: center;
     text-align: center;
 
+  }
+
+  .remove{
+    background-color:rgb(3, 3, 21);
+    border-color: rgb(3, 3, 29);
   }
