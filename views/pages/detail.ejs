@@ -1,45 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Detail Page</title>
-</head>
-<body>
-    <%- include('../partials/header.ejs') %>
-    <header>
-        <h1>Here are some activities</h1>
-    </header>
-    <main>
-        <section class="activities">
-                
+<%- include('../partials/header.ejs') %>
 
-              <% activity_Listings.forEach( each_Activity => { %>
-              
-                <div>
-                     <h3><%= each_Activity.activity %></h3>
-                     <p>Number of participants:<%= each_Activity.participants %></p>
-                     <p>Cost: <%= each_Activity.price %></p>
-                     <p>Accessibility level: <%= each_Activity.accessibility %></p>
-                </div>
+<header>
+    <h1>Here are some activities</h1>
+</header>
+<main>
+    <section class="activities">
 
-                  
-      <form action="/user-saves" method="POST" class="activities">
-        <input type ="hidden" name="activity" value="<%= each_Activity.activity %>">
-        <input type ="hidden" name="accessibility" value="<%= each_Activity.accessibility %>">
-        <input type ="hidden" name="type" value="<%= each_Activity.type %>">
-        <input type ="hidden" name="price" value="<%= each_Activity.price %>">
-        <input type ="hidden" name="participants" value="<%= each_Activity.participants %>">
-        <input type ="hidden" name="key" value="<%= each_Activity.key %>">
-        <input type="submit" value="Save Activity">
-      </form>
-  
-              <% }) %>
-             
-          </section>
-        
-          
-    </main>
-</body>
-</html>
+
+        <% activity_Listings.forEach( each_Activity => { %>
+
+        <div>
+            <h3><%= each_Activity.activity %></h3>
+            <p>Number of participants:<%= each_Activity.participants %></p>
+            <p>Cost: <%= each_Activity.price %></p>
+            <p>Accessibility level: <%= each_Activity.accessibility %></p>
+        </div>
+
+
+        <form action="/user-saves" method="POST" class="activities">
+            <input type="hidden" name="activity" value="<%= each_Activity.activity %>">
+            <input type="hidden" name="accessibility" value="<%= each_Activity.accessibility %>">
+            <input type="hidden" name="type" value="<%= each_Activity.type %>">
+            <input type="hidden" name="price" value="<%= each_Activity.price %>">
+            <input type="hidden" name="participants" value="<%= each_Activity.participants %>">
+            <input type="hidden" name="key" value="<%= each_Activity.key %>">
+            <input type="submit" value="Save Activity">
+        </form>
+
+        <% }) %>
+
+    </section>
+
+
+</main>
