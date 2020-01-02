@@ -92,7 +92,6 @@ app.delete('/delete', deleteBook);
   });
 
 
-
 app.get('/saves', (req, res) => {
   const instruction = 'SELECT * FROM bored;';
   client.query(instruction).then(function(sqlSaveData){
@@ -104,7 +103,6 @@ app.get('/saves', (req, res) => {
     }
   });
 });
-
 
 
 function Activity(object){
