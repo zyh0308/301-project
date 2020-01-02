@@ -6,9 +6,13 @@ body {
 }
 
 nav {
+  background-color: palevioletred;
+  color: rgb(223, 217, 192);
   display: flex;
+  font-family: 'Lobster', cursive;
+  font-size: 3vh;
   justify-content: space-between;
-  margin: 1.5em;
+  padding: 1em;
 }
 
 
