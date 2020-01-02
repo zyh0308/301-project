@@ -26,8 +26,7 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  
-  res.render('pages/index', {layout: false})
+  res.render('pages/index')
 });
 
 app.get('/main', (req, res) => {
