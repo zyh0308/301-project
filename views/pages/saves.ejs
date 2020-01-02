@@ -2,9 +2,11 @@
 
   <main>
       <a href="/main"><button>Go Back To Home Page</button></a>
-    <div class="content">
+   
       <% boredDataArray.forEach(bored => { %>
+      
         <% if (bored.username === username){%>
+          <div class="content">
       <h3>Acitvity: <%= bored.activity %> </h3>
       <h3>Accessibility Ranking: <%= bored.accessibility %> </h3>
       <h3>Activity Type: <%= bored.type%> </h3>
@@ -14,14 +16,14 @@
       
       <form action="/delete?_method=DELETE" method="POST">
         <input type="hidden" name= "id" value="<%=bored.id%>">
-        <input type="submit" value="delete activity">
+        <input class = "save" type="submit" value="delete activity">
       </form>
- 
-
-      </div>
-      <% } %>
-      <% }) %>
-
 
     </div>
+      <% } %>
+   
+      <% }) %>
+
+   
+   
   </main>

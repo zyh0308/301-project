@@ -24,7 +24,17 @@ h1{
   text-align: center;
  
 }
-h3 
+
+#exp{
+  color:rgb(223, 217, 192);
+  font-family: 'Lobster', cursive;
+  font-size: medium;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+ }
+
 
 @media(min-width: 768px){
   main  {

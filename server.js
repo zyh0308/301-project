@@ -8,7 +8,7 @@ const methodoverride = require('method-override');
 const pg = require('pg');
 const superagent = require('superagent');
 
-const PORT = process.env.PORT || 3484; 
+const PORT = process.env.PORT || 3434; 
 const app = express();
 
 const expressLayouts=require('express-ejs-layouts');
