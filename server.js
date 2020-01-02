@@ -109,7 +109,7 @@ function Activity(object){
   this.key = object.key;
 }
 
-
+//Function looping 5 times API call due to limitations of API
 function new_Activity_Search(request, response){
   let request_parameters = request.body;
   var activities_Array = [];
