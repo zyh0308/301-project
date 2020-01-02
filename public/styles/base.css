@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-  background-color: palevioletred;
+  background-color: rgb(131, 19, 235);
   color: rgb(223, 217, 192);
   display: flex;
   font-family: 'Lobster', cursive;
