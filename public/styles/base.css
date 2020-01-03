@@ -42,8 +42,22 @@ h1{
   }
 }
   
+
 @media only screen and (max-width: 500px) {
-  main{
-      max-width: 500px;
+  button.mb{
+    height: 200px;
+    width:80%;
+
   }
-}
+  div.activities{
+    width:80%;
+    height: 300px;
+  }
+
+  main.container{
+    justify-items: normal;
+    padding-left: 30px;
+     grid-template-columns: auto;
+
+  }
+} 
