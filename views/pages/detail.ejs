@@ -15,16 +15,15 @@
             <p >Cost: <%= each_Activity.price * 10 %></p>
             <p >Accessibility level: <%= each_Activity.accessibility * 10%></p>
 
-            
-                    <form action="/user-saves" method="POST" >
-                        <input type="hidden" name="activity" value="<%= each_Activity.activity %>">
-                        <input type="hidden" name="accessibility" value="<%= each_Activity.accessibility %>">
-                        <input type="hidden" name="type" value="<%= each_Activity.type %>">
-                        <input type="hidden" name="price" value="<%= each_Activity.price %>">
-                        <input type="hidden" name="participants" value="<%= each_Activity.participants %>">
-                        <input type="hidden" name="key" value="<%= each_Activity.key %>">
-                        <input type="submit" class="save" value="Save Activity">
-                    </form>
+            <form action="/user-saves" method="POST" >
+                <input type="hidden" name="activity" value="<%= each_Activity.activity %>">
+                <input type="hidden" name="accessibility" value="<%= each_Activity.accessibility %>">
+                <input type="hidden" name="type" value="<%= each_Activity.type %>">
+                <input type="hidden" name="price" value="<%= each_Activity.price %>">
+                <input type="hidden" name="participants" value="<%= each_Activity.participants %>">
+                <input type="hidden" name="key" value="<%= each_Activity.key %>">
+                <input type="submit" class="save" value="Save Activity">
+            </form>
         </div>
 
 
