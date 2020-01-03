@@ -52,7 +52,13 @@
 }
 
 .menu-options a:hover {background-color: #ddd;}
-.menu:hover .menu-options {display: block;}
+
+.menu:hover .menu-options {
+  display: block;
+  position: absolute;
+  right: 0;
+}
+
 .menu:hover i {display: none;}
 
 #name input {
