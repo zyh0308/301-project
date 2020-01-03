@@ -8,10 +8,10 @@
         <% if (bored.username === username){%>
           <div class="content">
       <h3>Acitvity: <%= bored.activity %> </h3>
-      <h3>Accessibility Ranking: <%= bored.accessibility %> </h3>
+      <h3>Accessibility Ranking: <%= bored.accessibility * 10 %> </h3>
       <h3>Activity Type: <%= bored.type%> </h3>
       <h3>Participants: <%= bored.participants %> </h3>
-      <h3>Price: <%= bored.price %> </h3>
+      <h3>Price: <%= bored.price * 10 %> </h3>
      
       
       <form action="/delete?_method=DELETE" method="POST">
